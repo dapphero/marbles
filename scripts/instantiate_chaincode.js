@@ -36,7 +36,7 @@ console.log('---------------------------------------');
 logger.warn('Note: the chaincode should have been installed before running this script');
 
 logger.info('First we enroll');
-fcw.enrollWithAdminCert(helper.makeEnrollmentOptionsUsingCert(), function (enrollErr, enrollResp) {
+fcw.enroll(helper.makeEnrollmentOptions(0), function (enrollErr, enrollResp) {
 	if (enrollErr != null) {
 		logger.error('error enrolling', enrollErr, enrollResp);
 	} else {

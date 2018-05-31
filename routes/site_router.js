@@ -87,7 +87,9 @@ function route_me(req, res) {
 		res.redirect('/login');
 	}
 	else {
-		res.render('marbles', { title: 'Marbles - Home', bag: build_bag(req) });
+		let bag = build_bag(req);
+		let company = bag.marble_company;
+		res.render('marbles', { title: 'Marbles - ' + company, bag: bag });
 	}
 }
 
