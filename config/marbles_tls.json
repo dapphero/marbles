@@ -2,11 +2,11 @@
     "cred_filename": "blockchain_creds_tls.json",
     "use_events": true,
     "keep_alive_secs": 120,
-    "company": "United Marbles",
+    "company": "GoTs",
     "usernames": [
-        "amy",
-        "alice",
-        "ava"
+        "Goffery",
+        "Cersi",
+        "Denearys"
     ],
     "port": 3001
 }

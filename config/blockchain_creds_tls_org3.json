@@ -1,0 +1,88 @@
+{
+    "name": "aws-network",
+    "x-type": "hlfv1",
+    "version": "1.0.0",
+    "client": {
+        "organization": "org3MSP",
+        "credentialStore": {
+            "path": "crypto/kvs"
+        },
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300",
+                    "eventHub": "300",
+                    "eventReg": "300"
+                },
+                "orderer": "300"
+            }
+        }
+    },
+    "channels": {
+        "mychannel": {
+            "orderers": [
+                "orderer.example.com"
+            ],
+            "peers": {
+                "peer0.org3.example.com": {
+                    "endorsingPeer": true,
+                    "chaincodeQuery": true,
+                    "eventSource": true
+                }
+            },
+            "chaincodes": {
+                "marbles": "v4"
+            }
+        }
+    },
+    "organizations": {
+        "org3MSP": {
+            "mspid": "org3MSP",
+            "peers": [
+                "peer0.org3.example.com"
+            ],
+            "certificateAuthorities": [
+                "ca.org3.example.com"
+            ]
+        }
+    },
+    "orderers": {
+        "orderer.example.com": {
+            "url": "grpcs://host.example.com:7050",
+            "grpcOptions": {
+                "ssl-target-name-override": "orderer.example.com"
+            },
+            "tlsCACerts": {
+                "path": "crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem"
+            }
+        }
+    },
+    "peers": {
+        "peer0.org3.example.com": {
+            "url": "grpcs://host.example.com:9051",
+            "eventUrl": "grpcs://host.example.com:9053",
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.org3.example.com"
+            },
+            "tlsCACerts": {
+                "path": "crypto-config/peerOrganizations/org3.example.com/msp/tlscacerts/tlsca.org3.example.com-cert.pem"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.org3.example.com": {
+            "url": "https://host.example.com:9054",
+            "caName": "ca-org3",
+            "httpOptions": {
+                "verify": false
+            },
+            "registrar": [
+                {
+                    "affiliation": "group3",
+                    "enrollId": "Admin@org3.example.com",
+                    "enrollSecret": "adminpw"
+                }
+            ]
+        }
+    }
+}

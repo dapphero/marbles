@@ -1,0 +1,12 @@
+{
+    "cred_filename": "blockchain_creds_tls_org3.json",
+    "use_events": true,
+    "keep_alive_secs": 120,
+    "company": "Westworlds",
+    "usernames": [
+        "dolores",
+        "bernard",
+        "maeve"
+    ],
+    "port": 3001
+}

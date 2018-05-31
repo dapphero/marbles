@@ -1,0 +1,12 @@
+{
+    "cred_filename": "blockchain_creds_tls_org1.json",
+    "use_events": true,
+    "keep_alive_secs": 120,
+    "company": "Dappheros",
+    "usernames": [
+        "luigi",
+        "dory",
+        "hermoine"
+    ],
+    "port": 3001
+}

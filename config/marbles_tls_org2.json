@@ -1,0 +1,12 @@
+{
+    "cred_filename": "blockchain_creds_tls_org2.json",
+    "use_events": true,
+    "keep_alive_secs": 120,
+    "company": "Simpsons",
+    "usernames": [
+        "bart",
+        "lisa",
+        "homer"
+    ],
+    "port": 3001
+}
