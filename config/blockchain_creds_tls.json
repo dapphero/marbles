@@ -76,7 +76,7 @@
     },
     "orderers": {
         "orderer.example.com": {
-            "url": "grpcs://54.191.108.209:7050",
+            "url": "grpcs://host.example.com:7050",
             "grpcOptions": {
                 "ssl-target-name-override": "orderer.example.com"
             },
@@ -87,8 +87,8 @@
     },
     "peers": {
         "peer0.org1.example.com": {
-            "url": "grpcs://54.191.108.209:7051",
-            "eventUrl": "grpcs://54.191.108.209:7053",
+            "url": "grpcs://host.example.com:7051",
+            "eventUrl": "grpcs://host.example.com:7053",
             "grpcOptions": {
                 "ssl-target-name-override": "peer0.org1.example.com"
             },
@@ -97,8 +97,8 @@
             }
         },
         "peer0.org2.example.com": {
-            "url": "grpcs://54.191.108.209:8051",
-            "eventUrl": "grpcs://54.191.108.209:8053",
+            "url": "grpcs://host.example.com:8051",
+            "eventUrl": "grpcs://host.example.com:8053",
             "grpcOptions": {
                 "ssl-target-name-override": "peer0.org2.example.com"
             },
@@ -107,8 +107,8 @@
             }
         },
         "peer0.org3.example.com": {
-            "url": "grpcs://54.191.108.209:9051",
-            "eventUrl": "grpcs://54.191.108.209:9053",
+            "url": "grpcs://host.example.com:9051",
+            "eventUrl": "grpcs://host.example.com:9053",
             "grpcOptions": {
                 "ssl-target-name-override": "peer0.org3.example.com"
             },
@@ -119,7 +119,7 @@
     },
     "certificateAuthorities": {
         "ca.org1.example.com": {
-            "url": "https://54.191.108.209:7054",
+            "url": "https://host.example.com:7054",
             "caName": "ca-org1",
             "httpOptions": {
                 "verify": false
@@ -133,7 +133,7 @@
             ]
         },
         "ca.org2.example.com": {
-            "url": "https://54.191.108.209:8054",
+            "url": "https://host.example.com:8054",
             "caName": "ca-org2",
             "httpOptions": {
                 "verify": false
@@ -147,7 +147,7 @@
             ]
         },
         "ca.org3.example.com": {
-            "url": "https://54.191.108.209:9054",
+            "url": "https://host.example.com:9054",
             "caName": "ca-org3",
             "httpOptions": {
                 "verify": false
